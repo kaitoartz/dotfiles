@@ -25,10 +25,11 @@
     "unfocused": "#303030"
   },
   "mouse_follows_focus": true,
-  "transparency": true,
+  "transparency": false,
   "transparency_alpha": 220,
+  "integer_layouts": true,
   "animation": {
-    "enabled": true,
+    "enabled": false,
     "duration": 400,
     "fps": 120,
     "style": {
