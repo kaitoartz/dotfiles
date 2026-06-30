@@ -16,7 +16,7 @@
       "command": "npx.cmd",
       "disabled": true,
       "env": {
-        "CONTEXT7_API_KEY": "{{ .CONTEXT7_API_KEY }}"
+        "CONTEXT7_API_KEY": "{{ index . "context7_api_key" }}"
       }
     },
     "firefox-devtools": {
@@ -41,7 +41,7 @@
       "command": "npx",
       "disabled": true,
       "env": {
-        "API_KEY": "{{ .API_KEY }}"
+        "API_KEY": "{{ index . "21st-dev-api-key" }}"
       }
     },
     "notion": {
@@ -52,7 +52,7 @@
       "command": "npx.cmd",
       "disabled": true,
       "env": {
-        "NOTION_API_TOKEN": "{{ .NOTION_API_TOKEN }}"
+        "NOTION_API_TOKEN": "{{ .notion_api_key }}"
       }
     },
     "open-design": {
@@ -64,7 +64,7 @@
       "disabled": true,
       "env": {
         "ELECTRON_RUN_AS_NODE": "1",
-        "OD_DATA_DIR": "C:/Users/Carlos.Ortiz\\AppData\\Roaming\\Open Design\\namespaces\\release-stable-win\\data",
+        "OD_DATA_DIR": "{{ .chezmoi.homeDir }}\\AppData\\Roaming\\Open Design\\namespaces\\release-stable-win\\data",
         "OD_SIDECAR_IPC_PATH": "\\\\.\\pipe\\open-design-release-stable-win-daemon"
       }
     },
@@ -75,17 +75,7 @@
         "@meshy-ai/meshy-mcp-server"
       ],
       "env": {
-        "MESHY_API_KEY": "{{ .MESHY_API_KEY }}"
-      }
-    },
-    "meshy": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@meshy-ai/meshy-mcp-server"
-      ],
-      "env": {
-        "MESHY_API_KEY": "{{ .MESHY_API_KEY }}"
+        "MESHY_API_KEY": "{{ .meshy_api_key }}"
       }
     }
   }
