@@ -1,0 +1,92 @@
+{
+  "servers": {
+    "codepen": {
+      "args": [
+        "-y",
+        "codepen-mcp"
+      ],
+      "command": "npx",
+      "disabled": true
+    },
+    "context7": {
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "command": "npx.cmd",
+      "disabled": true,
+      "env": {
+        "CONTEXT7_API_KEY": "{{ .CONTEXT7_API_KEY }}"
+      }
+    },
+    "firefox-devtools": {
+      "args": [
+        "-y",
+        "firefox-devtools-mcp@latest",
+        "--headless",
+        "--viewport",
+        "375x667"
+      ],
+      "command": "npx",
+      "disabled": true,
+      "env": {
+        "START_URL": "about:home"
+      }
+    },
+    "magic": {
+      "args": [
+        "-y",
+        "@21st-dev/magic@latest"
+      ],
+      "command": "npx",
+      "disabled": true,
+      "env": {
+        "API_KEY": "{{ .API_KEY }}"
+      }
+    },
+    "notion": {
+      "args": [
+        "-y",
+        "@suekou/mcp-notion-server"
+      ],
+      "command": "npx.cmd",
+      "disabled": true,
+      "env": {
+        "NOTION_API_TOKEN": "{{ .NOTION_API_TOKEN }}"
+      }
+    },
+    "open-design": {
+      "args": [
+        "D:\\Proyects\\Projects\\Open Design\\resources\\app\\prebundled\\daemon\\daemon-cli.mjs",
+        "mcp"
+      ],
+      "command": "D:\\Proyects\\Projects\\Open Design\\Open Design.exe",
+      "disabled": true,
+      "env": {
+        "ELECTRON_RUN_AS_NODE": "1",
+        "OD_DATA_DIR": "C:/Users/Carlos.Ortiz\\AppData\\Roaming\\Open Design\\namespaces\\release-stable-win\\data",
+        "OD_SIDECAR_IPC_PATH": "\\\\.\\pipe\\open-design-release-stable-win-daemon"
+      }
+    },
+    "meshy-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@meshy-ai/meshy-mcp-server"
+      ],
+      "env": {
+        "MESHY_API_KEY": "{{ .MESHY_API_KEY }}"
+      }
+    },
+    "meshy": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@meshy-ai/meshy-mcp-server"
+      ],
+      "env": {
+        "MESHY_API_KEY": "{{ .MESHY_API_KEY }}"
+      }
+    }
+  }
+}

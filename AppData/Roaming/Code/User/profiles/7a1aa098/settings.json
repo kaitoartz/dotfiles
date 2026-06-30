@@ -1,0 +1,574 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.scrollbar.vertical": "auto",
+    "editor.overviewRulerBorder": false,
+    "editor.hideCursorInOverviewRuler": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "[csharp]": {
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    "editor.guides.indentation": false,
+    "indenticator.width": 1,
+    "indenticator.color.dark": "#888",
+    "breadcrumbs.enabled": true,
+    "editor.wordWrap": "on",
+    "editor.mouseWheelZoom": true,
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
+    "editor.unicodeHighlight.allowedCharacters": {
+        " ": true
+    },
+    "window.newWindowProfile": "Default",
+    "telemetry.editStats.enabled": false,
+    "telemetry.feedback.enabled": false,
+
+    // =========================================================
+    // 2. UNITY & CLEANUP
+    // =========================================================
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "gitlens.ai.model": "vscode",
+    "gitlens.ai.vscode.model": "copilot:gpt-4.1",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.meta": true,
+        "**/*.csproj": true,
+        "**/*.sln": true,
+        "**/Library/": true,
+        "**/Temp/": true,
+        "**/Obj/": true,
+        "**/Build/": true,
+        "**/Builds/": true,
+        "**/Logs/": true,
+        "**/UserSettings/": true
+    },
+    "unity.autoSave": false,
+    "explorer.autoReveal": true,
+    "dotnet.excludedPaths": [
+        "**/bin/**",
+        "**/obj/**",
+        "**/Library/**",
+        "**/Temp/**"
+    ],
+
+    // =========================================================
+    // 3. ÍCONOS (Tu configuración aprobada)
+    // =========================================================
+    "workbench.colorTheme": "Bearded Theme Black & Amethyst Soft",
+    "workbench.iconTheme": "material-icon-theme",
+    "material-icon-theme.folders.associations": {
+        "Assets": "unity",
+        "00-PROJECT": "project",
+        "00-SCENES": "views",
+        "01-SCRIPTS": "scripts",
+        "02-ART": "images",
+        "Scenes": "views",
+        "Zona01Escena01": "views",
+        "Prefab": "components",
+        "Prefabs": "components",
+        "Scripts": "scripts",
+        "Core": "core",
+        "Managers": "controller",
+        "Controllers": "controller",
+        "Systems": "cog",
+        "Helpers": "utils",
+        "Utilities": "utils",
+        "Extensions": "plugin",
+        "Player": "console",
+        "Enemy": "robot",
+        "Enemies": "robot",
+        "NPCs": "account",
+        "AI": "brain",
+        "Spawn": "trigger",
+        "Gameplay": "game",
+        "Data": "database",
+        "DataPersistence": "database",
+        "ScriptableObjects": "database",
+        "Configs": "config",
+        "Config": "config",
+        "Settings": "config",
+        "UI": "ui",
+        "HUD": "ui",
+        "Art": "images",
+        "Textures": "images",
+        "Sprites": "images",
+        "Materials": "images",
+        "Shaders": "shader",
+        "Fonts": "font",
+        "Models": "container",
+        "Meshes": "container",
+        "Animations": "animation",
+        "Animation_Enemy": "animation",
+        "Animation_Enemy01": "animation",
+        "Animation_Player": "animation",
+        "Animator": "animation",
+        "Audio": "audio",
+        "Music": "audio",
+        "Sounds": "audio",
+        "Editor": "tools",
+        "Plugins": "plugin",
+        "Resources": "resource",
+        "StreamingAssets": "content",
+        "AddressableAssetsData": "database",
+        "Tests": "test",
+        "Test": "test",
+        "Debug": "debug",
+        "Build": "package",
+        "Builds": "package",
+        "Docs": "docs",
+        "Documentation": "docs"
+    },
+    "material-icon-theme.files.associations": {
+        "*.tmpl": "html",
+        "*.cs": "csharp",
+        "*.asmdef": "settings",
+        "*.asmref": "settings",
+        "*.json": "json",
+        "*.xml": "xml",
+        "*.yaml": "yaml",
+        "*.yml": "yaml",
+        "*.shader": "shader",
+        "*.cginc": "shader",
+        "*.hlsl": "shader",
+        "*.glsl": "shader",
+        "*.compute": "shader",
+        "*.shadergraph": "shader",
+        "*.shadersubgraph": "shader",
+        "*.mat": "unity",
+        "*.unity": "unity",
+        "*.prefab": "unity",
+        "*.asset": "database",
+        "*.unitypackage": "zip",
+        "*.overrideController": "animation",
+        "*.anim": "animation",
+        "*.controller": "animation",
+        "*.mask": "animation",
+        "*.playable": "video",
+        "*.signal": "trigger",
+        "*.mixer": "audio",
+        "*.audioMixer": "audio",
+        "*.snapshot": "audio",
+        "*.fbx": "3d",
+        "*.obj": "3d",
+        "*.blend": "blender",
+        "*.dae": "3d",
+        "*.stl": "3d",
+        "*.3ds": "3d",
+        "*.gltf": "3d",
+        "*.glb": "3d",
+        "*.png": "image",
+        "*.jpg": "image",
+        "*.jpeg": "image",
+        "*.tga": "image",
+        "*.psd": "photoshop",
+        "*.tiff": "image",
+        "*.tif": "image",
+        "*.bmp": "image",
+        "*.exr": "image",
+        "*.hdr": "image",
+        "*.ttf": "font",
+        "*.otf": "font",
+        "*.mp3": "audio",
+        "*.wav": "audio",
+        "*.ogg": "audio",
+        "*.aiff": "audio",
+        "*.flac": "audio",
+        "*.mp4": "video",
+        "*.mov": "video",
+        "*.webm": "video",
+        "*.avi": "video",
+        "*.uss": "css",
+        "*.uxml": "xml",
+        "*.spriteatlas": "image",
+        "*.inputactions": "json",
+        "*.navmesh": "brain",
+        "*.navmeshdata": "brain",
+        "*.terrainlayer": "image",
+        "*.terrain": "image",
+        "*.lighting": "light",
+        "*.rendertexture": "image",
+        "*.addressable": "database",
+        "*.log": "log",
+        "*.md": "markdown",
+        "*.txt": "document",
+        "*.zip": "zip",
+        "*.rar": "zip",
+        "*.7z": "zip"
+    },
+
+    // =========================================================
+    // 4. UI COLORS (Tus colores originales)
+    // =========================================================
+    "workbench.colorCustomizations": {
+    
+        "editor.background": "#0E0E12",
+        "editor.foreground": "#E6E6EB",
+        "editorLineNumber.foreground": "#4B4B57",
+        "editorLineNumber.activeForeground": "#9D7CFF",
+        "editor.selectionBackground": "#6E3EFF55",
+        "editor.inactiveSelectionBackground": "#6E3EFF33",
+        "editorCursor.foreground": "#9D7CFF",
+        "editor.findMatchBackground": "#FFB86C55",
+        "editor.findMatchHighlightBackground": "#FFB86C33",
+        "editor.lineHighlightBackground": "#FFFFFF08",
+        "editorBracketMatch.background": "#00FFC855",
+        "editorBracketMatch.border": "#00FFC8"
+    },
+
+    // =========================================================
+    // 5. SYNTAX COLORS (RESTAURO TUS COLORES, MATO EL ROJO)
+    // =========================================================
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings": { "foreground": "#79c85d", "fontStyle": "italic" }
+            },
+            {
+                "scope": "string",
+                "settings": { "foreground": "#FF9F43" }
+            },
+            {
+                "scope": "constant.numeric",
+                "settings": { "foreground": "#5CFF7A" }
+            },
+            // CORREGIDO: Keywords (antes rojo) -> Tu azul #4294ff
+            {
+                "scope": "keyword",
+                "settings": { "foreground": "#4294ff" }
+            },
+            // CORREGIDO: Control (if/else) -> Tu azul #427ecc
+            {
+                "scope": "keyword.control",
+                "settings": { "foreground": "#427ecc" }
+            },
+            // CORREGIDO: Tipos (antes cyan claro) -> Mantenemos tu cyan #4DE6FF
+            {
+                "scope": "storage.type",
+                "settings": { "foreground": "#4DE6FF" }
+            },
+            // Clases -> Tu verde #02ddae
+            {
+                "scope": "entity.name.type",
+                "settings": { "foreground": "#02ddae" }
+            },
+            // CORREGIDO: Métodos (antes rojo) -> Amarillo suave #FFD866
+            {
+                "scope": "entity.name.function",
+                "settings": { "foreground": "#FFD866" }
+            },
+            {
+                "scope": "variable",
+                "settings": { "foreground": "#E6E6EB" }
+            },
+            // Campos Serialized -> Morado #C792EA
+            {
+                "scope": "variable.other.readwrite",
+                "settings": { "foreground": "#C792EA" }
+            },
+            // CORREGIDO: Atributos [Header] (antes rojo) -> Tu verde #00FFC8
+            {
+                "scope": "meta.attribute.cs",
+                "settings": { "foreground": "#00FFC8" }
+            },
+            {
+                "scope": "identifier.type",
+                "settings": { "foreground": "#4DFFFF" }
+            },
+            {
+                "scope": "constant.other.enum",
+                "settings": { "foreground": "#FF9F43" }
+            },
+            {
+                "scope": "entity.name.namespace",
+                "settings": { "foreground": "#7F7FFF" }
+            },
+            {
+                "scope": "keyword.operator",
+                "settings": { "foreground": "#E6E6EB", "fontStyle": "light" }
+            },
+            
+            // === COLORES PARA HTML ===
+            // Tags HTML (<div>, <span>, etc.)
+            {
+                "scope": "entity.name.tag.html",
+                "settings": { "foreground": "#4294ff" }  // Azul brillante para tags
+            },
+            {
+                "scope": "punctuation.definition.tag.html",
+                "settings": { "foreground": "#427ecc" }  // Azul oscuro para < >
+            },
+            // Atributos HTML (class, id, src, etc.)
+            {
+                "scope": "entity.other.attribute-name.html",
+                "settings": { "foreground": "#00FFC8" }  // Verde menta para atributos
+            },
+            {
+                "scope": "entity.other.attribute-name.id.html",
+                "settings": { "foreground": "#5CFF7A" }  // Verde brillante para id
+            },
+            {
+                "scope": "entity.other.attribute-name.class.html",
+                "settings": { "foreground": "#4DE6FF" }  // Cyan para class
+            },
+            // Valores de atributos HTML
+            {
+                "scope": "string.quoted.double.html",
+                "settings": { "foreground": "#FF9F43" }  // Naranja para strings
+            },
+            {
+                "scope": "string.quoted.single.html",
+                "settings": { "foreground": "#FF9F43" }  // Naranja para strings
+            },
+            // Doctype
+            {
+                "scope": "meta.tag.metadata.doctype.html",
+                "settings": { "foreground": "#7F7FFF" }  // Morado para DOCTYPE
+            },
+            {
+                "scope": "entity.name.tag.doctype.html",
+                "settings": { "foreground": "#7F7FFF" }
+            },
+            // Comentarios HTML (ya está definido para comments en general)
+            {
+                "scope": "comment.block.html",
+                "settings": { "foreground": "#79c85d", "fontStyle": "italic" }
+            },
+            
+            // === COLORES PARA CSS ===
+            // Selectores CSS (div, .class, #id, etc.)
+            {
+                "scope": "entity.name.tag.css",
+                "settings": { "foreground": "#4294ff" }  // Azul brillante para tags
+            },
+            {
+                "scope": "entity.other.attribute-name.class.css",
+                "settings": { "foreground": "#4DE6FF" }  // Cyan para clases
+            },
+            {
+                "scope": "entity.other.attribute-name.id.css",
+                "settings": { "foreground": "#5CFF7A" }  // Verde brillante para IDs
+            },
+            {
+                "scope": "entity.other.attribute-name.pseudo-class.css",
+                "settings": { "foreground": "#FFD866" }  // Amarillo para :hover, :active
+            },
+            {
+                "scope": "entity.other.attribute-name.pseudo-element.css",
+                "settings": { "foreground": "#FF9F43" }  // Naranja para ::before, ::after
+            },
+            // Propiedades CSS (color, background, etc.)
+            {
+                "scope": "support.type.property-name.css",
+                "settings": { "foreground": "#00FFC8" }  // Verde menta para propiedades
+            },
+            {
+                "scope": "meta.property-name.css",
+                "settings": { "foreground": "#00FFC8" }
+            },
+            // Valores CSS
+            {
+                "scope": "support.constant.property-value.css",
+                "settings": { "foreground": "#C792EA" }  // Morado para valores predefinidos
+            },
+            {
+                "scope": "constant.numeric.css",
+                "settings": { "foreground": "#5CFF7A" }  // Verde para números
+            },
+            {
+                "scope": "keyword.other.unit.css",
+                "settings": { "foreground": "#5CFF7A" }  // Verde para unidades (px, em, %)
+            },
+            // Colores hexadecimales
+            {
+                "scope": "constant.other.color.rgb-value.hex.css",
+                "settings": { "foreground": "#FF9F43" }  // Naranja para colores hex
+            },
+            // Funciones CSS (rgba, url, calc, etc.)
+            {
+                "scope": "support.function.css",
+                "settings": { "foreground": "#FFD866" }  // Amarillo para funciones
+            },
+            // At-rules (@media, @import, @keyframes)
+            {
+                "scope": "keyword.control.at-rule.css",
+                "settings": { "foreground": "#7F7FFF" }  // Morado para @rules
+            },
+            {
+                "scope": "keyword.control.at-rule.media.css",
+                "settings": { "foreground": "#7F7FFF" }
+            },
+            // Strings en CSS
+            {
+                "scope": "string.quoted.double.css",
+                "settings": { "foreground": "#FF9F43" }  // Naranja para strings
+            },
+            {
+                "scope": "string.quoted.single.css",
+                "settings": { "foreground": "#FF9F43" }
+            },
+            // Operadores y puntuación CSS
+            {
+                "scope": "punctuation.definition.entity.css",
+                "settings": { "foreground": "#4DE6FF" }  // Cyan para . y #
+            },
+            {
+                "scope": "punctuation.separator.key-value.css",
+                "settings": { "foreground": "#E6E6EB" }  // Blanco para :
+            },
+            // Variables CSS (--variable)
+            {
+                "scope": "variable.css",
+                "settings": { "foreground": "#41d6ff" }  // Cyan eléctrico para variables
+            },
+            {
+                "scope": "variable.argument.css",
+                "settings": { "foreground": "#41d6ff" }
+            },
+            // Important
+            {
+                "scope": "keyword.other.important.css",
+                "settings": { "foreground": "#FF6B9D", "fontStyle": "bold" }  // Rosa para !important
+            }
+        ]
+    },
+
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            // === TUS COLORES NEÓN (RESTAURADOS) ===
+            "keyword.control": "#427ecc",   // Tu azul oscuro
+            "keyword": "#4294ff",           // Tu azul brillante
+            "modifier": "#4DE6FF",
+            "type": "#5fccff",              // Tu celeste
+            "method": "#FFD866",            // Amarillo
+            "method.declaration": "#FFD866",
+            "method.extension": "#4DE6FF",
+            "field": "#41d6ff",             // Tu cyan eléctrico
+            "variable": "#41d6ff",          // Tu cyan eléctrico
+            "property": "#00FFC8",          // Tu verde menta
+            "parameter": "#3bbaff",         // Tu azul cielo
+            "enum": "#02ddae",              // Tu verde
+            "enumMember": "#5CFF7A",
+            "namespace": "#7F7FFF",
+            "class": "#00FFC8",
+            "struct": "#00FFC8",
+
+            // === ELIMINACIÓN DEL ROJO (#FF6AC1) EN SEMANTIC ===
+            // Aquí es donde estaba el error, lo cambiamos a tus tonos:
+            
+            "controlKeyword": "#427ecc",    // Antes rojo -> Ahora tu azul
+            "attribute": "#00FFC8",         // Antes rojo -> Ahora tu verde menta
+            "operator": "#ffebff"           // Antes rojo -> Ahora blanco/gris
+        }
+    },
+    "workbench.editor.empty.hint": "hidden",
+    "claudeCode.preferredLocation": "panel",
+    "yaml.schemas": {
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-1.2.14-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-1.2.16-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-1.2.17-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-1.2.18-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-1.2.19-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-1.2.21-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-1.2.22-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Err0rNotFound/.vscode/extensions/continue.continue-1.2.22-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/corte/.vscode/extensions/continue.continue-1.2.22-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Err0rNotFound/.vscode/extensions/continue.continue-1.2.24-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/corte/.vscode/extensions/continue.continue-2.0.0-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ],
+        "file:///c%3A/Users/Carlos.Ortiz/.vscode/extensions/continue.continue-2.0.0-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    },
+    "terminal.explorerKind": "both",
+    "chat.useAgentSkills": true,
+    "chat.useNestedAgentsMdFiles": true,
+    "workbench.sideBar.location": "right",
+    "chat.mcp.gallery.enabled": true,
+    "chat.tools.urls.autoApprove": {
+        "https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md": true,
+        "https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main": true,
+        "https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines": true,
+        "https://raw.githubusercontent.com/vercel-labs": true,
+        "https://raw.githubusercontent.com": true,
+        "https://*.githubusercontent.com": true
+    },
+    "chat.mcp.serverSampling": {
+        "Global in Code: notion": {
+            "allowedModels": [
+                "copilot/auto"
+            ]
+        },
+        "Global in Code: github": {
+            "allowedModels": [
+                "copilot/auto",
+                "copilot/claude-haiku-4.5",
+                "copilot/claude-opus-4.5",
+                "copilot/claude-opus-4.6",
+                "copilot/claude-sonnet-4",
+                "copilot/claude-sonnet-4.5",
+                "copilot/gemini-2.5-pro",
+                "copilot/gemini-3-flash-preview",
+                "copilot/gemini-3-pro-preview",
+                "copilot/gpt-4.1",
+                "copilot/gpt-4o",
+                "copilot/gpt-5",
+                "copilot/gpt-5-mini",
+                "copilot/gpt-5-codex",
+                "copilot/gpt-5.1",
+                "copilot/gpt-5.1-codex",
+                "copilot/gpt-5.1-codex-max",
+                "copilot/gpt-5.1-codex-mini",
+                "copilot/gpt-5.2",
+                "copilot/gpt-5.2-codex",
+                "copilot/gpt-5.3-codex",
+                "copilot/grok-code-fast-1",
+                "copilot/oswe-vscode-prime"
+            ]
+        }
+    },
+    "git.autofetch": true,
+    "chat.tools.terminal.autoApprove": {
+        "npm install": true
+    },
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "continue.showInlineTip": false,
+    "workbench.startupEditor": "none",
+    "editor.defaultColorDecorators": "always",
+    "chat.viewSessions.orientation": "stacked",
+    "go.toolsManagement.autoUpdate": true,
+    "files.associations": {
+        ".tmpl": "html"
+    },
+    "json.schemas": [
+        
+    ]
+}
