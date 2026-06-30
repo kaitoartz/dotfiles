@@ -122,23 +122,22 @@ widgets:
     type: "yasb.battery.BatteryWidget"
     options:
       label: "<span>{icon}</span> {percent}%"
-      label_alt: "<span>{icon}</span> {percent}% ({time_remaining})"
-      update_interval: 10000
-      status_thresholds:
-        critical: 10
-        low: 25
-        medium: 50
-        high: 80
-        full: 100
-      status_icons:
-        icon_charging: "\udb80\udc84"
-        icon_critical: "\udb80\udc83"
-        icon_low: "\udb80\udc7b"
-        icon_medium: "\udb80\udc7e"
-        icon_high: "\udb80\udc81"
-        icon_full: "\udb80\udc79"
-      callbacks:
-        on_left: "toggle_label"
+      update_interval: 30000
+      charging_options:
+        blink_charging_icon: true
+    status_thresholds:
+      critical: 10
+      low: 25
+      medium: 75
+      high: 95
+      full: 100
+    status_icons:
+      icon_charging: "\uf0e7"
+      icon_critical: "\uf244"
+      icon_low: "\uf243"
+      icon_medium: "\uf242"
+      icon_high: "\uf241"
+      icon_full: "\uf240"
   clock:
     type: "yasb.clock.ClockWidget"
     options:
@@ -302,14 +301,20 @@ widgets:
           models:
             - name: "" #you can find the name using 'ollama list'
               label: "You have to set it up in the config.yaml"
-              default: true
+              default: false
         - provider: "Gemini"
           api_endpoint: "https://generativelanguage.googleapis.com/v1beta/openai/"
           credential: "{{ .gemini_api_key }}"
           models:
-            - name: "gemini-1.5-pro"
-              label: "Gemini 1.5 Pro"
-              default: false
+            - name: "gemini-2.5-flash"
+              label: "Gemini 2.5 Flash"
+              default: true
+            - name: "gemini-2.5-flash-lite"
+              label: "Gemini 2.5 Flash Lite"
+            - name: "gemini-2.0-flash"
+              label: "Gemini 2.0 Flash"
+            - name: "gemini-1.5-flash"
+              label: "Gemini 1.5 Flash"
         - provider: "Custom"
           api_endpoint: "YOUR_API_ENDPOINT_HERE"
           credential: "YOUR_API_KEY_HERE"
