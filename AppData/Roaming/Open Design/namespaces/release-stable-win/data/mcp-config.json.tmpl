@@ -1,0 +1,35 @@
+{
+  "servers": [
+    {
+      "id": "21st-dev-magic",
+      "transport": "stdio",
+      "enabled": true,
+      "label": "21st.dev Magic (UI components)",
+      "templateId": "21st-dev-magic",
+      "command": "npx",
+      "args": [
+        "-y",
+        "@21st-dev/magic@latest",
+        "API_KEY={{ index . "21st-dev-magic-api-key" }}"
+      ]
+    },
+    {
+      "id": "codepen",
+      "transport": "stdio",
+      "enabled": true,
+      "command": "npx",
+      "args": [
+        "-y,codepen-mcp"
+      ]
+    },
+    {
+      "id": "context7",
+      "transport": "stdio",
+      "enabled": true,
+      "command": "npx.cmd",
+      "args": [
+        "-y,@upstash/context7-mcp"
+      ]
+    }
+  ]
+}

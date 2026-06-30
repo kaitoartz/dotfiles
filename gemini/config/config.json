@@ -1,0 +1,19 @@
+{
+  "userSettings": {
+    "customThemeSeedsDark": {
+      "background": "#101010",
+      "foregroundOverride": "#D7D7D7",
+      "primary": "#e1fc07"
+    },
+    "customThemeSeedsLight": {
+      "primary": "#e1fc07"
+    },
+    "globalPermissionGrants": {
+      "allow": [
+        "unsandboxed(pnpm)",
+        "command(git status)",
+        "command(git diff)"
+      ]
+    }
+  }
+}

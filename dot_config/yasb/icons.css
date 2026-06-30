@@ -1,0 +1,37 @@
+/* ICONS-INJECTED START */
+@font-face {
+    font-family: "Font Awesome 6 Free";
+    src: url("{{ .chezmoi.homeDir }}/.config/yasb/fonts/fa-solid-900.ttf") format("truetype");
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Phosphor";
+    src: url("{{ .chezmoi.homeDir }}/.config/yasb/fonts/Phosphor.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Fuentes texto normal */
+.yasb-bar,
+.widget,
+.label,
+.button,
+.ws-btn,
+.app-title,
+.power-menu-popup {
+    font-family: "Segoe UI", "JetBrainsMono NFP", sans-serif !important;
+}
+
+/* Fuentes iconos (peso 900 para FA) */
+.icon,
+.label span,
+.power-menu-popup .button .icon,
+.systray .button,
+.power-menu-widget .label {
+    font-family: "Segoe Fluent Icons", "JetBrainsMono NFP", "Font Awesome 7 Free", "Phosphor", "Segoe UI Symbol", "Segoe UI Emoji", sans-serif !important;
+    font-weight: 900 !important;
+}
+
+/* ICONS-INJECTED END */

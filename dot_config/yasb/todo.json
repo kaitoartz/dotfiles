@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1780508004,
+    "title": "Animar personaje con rig de IST",
+    "description": "",
+    "category": "urgent",
+    "created_at": "2026-06-03T13:33:24.534089",
+    "completed": false,
+    "order": 3
+  },
+  {
+    "id": 1780499533,
+    "title": "VIDEO IA DE ATRAPAMIENTO Y VER WORKFLOW",
+    "description": "",
+    "category": "important",
+    "created_at": "2026-06-03T11:12:13.162312",
+    "completed": true,
+    "order": 2
+  },
+  {
+    "id": 1780343277,
+    "title": "Mandar scorms teletrabajo BCI",
+    "description": "",
+    "category": "urgent",
+    "created_at": "2026-06-01T15:47:57.068887",
+    "completed": true,
+    "order": 1
+  },
+  {
+    "id": 1780342101,
+    "title": "Hacer animación Maquinaria AGUNSA",
+    "description": "",
+    "category": "today",
+    "created_at": "2026-06-01T15:28:21.076601",
+    "completed": false,
+    "order": 0
+  }
+]

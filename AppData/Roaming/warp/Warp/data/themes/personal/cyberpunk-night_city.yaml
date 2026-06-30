@@ -1,0 +1,27 @@
+# background_image:
+#   # background image source: https://cyberpunk.city/t/cdpr-the-new-engine-of-cyberpunk-2077-helps-develop-the-first-person-shooting-it-has-achieved-the-special-effect-of-ray-tracing/74
+#   path: Cyberpunk/2077/Images/Night_City.jpg
+#  opacity: 25
+accent: "#7aa2f7"
+background: "#1a1b26"
+details: darker
+foreground: "#c0caf5"
+terminal_colors:
+  bright:
+    black: "#414868"
+    blue: "#7aa2f7"
+    cyan: "#7dcfff"
+    green: "#9ece6a"
+    magenta: "#bb9af7"
+    red: "#f7768e"
+    white: "#c0caf5"
+    yellow: "#e0af68"
+  normal:
+    black: "#15161e"
+    blue: "#7aa2f7"
+    cyan: "#7dcfff"
+    green: "#9ece6a"
+    magenta: "#bb9af7"
+    red: "#f7768e"
+    white: "#a9b1d6"
+    yellow: "#e0af68"

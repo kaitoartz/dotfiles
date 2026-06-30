@@ -1,0 +1,262 @@
+watch_stylesheet: true
+watch_config: true
+debug: false
+komorebi:
+  start_command: "komorebic start --whkd"
+  stop_command: "komorebic stop --whkd"
+  reload_command: "komorebic stop --whkd && komorebic start --whkd"
+bars:
+  primary-bar:
+    enabled: true
+    screens: ["*"]
+    class_name: "yasb-bar"
+    alignment:
+      position: "top"
+      center: false
+    blur_effect:
+      enabled: false
+      acrylic: false
+      dark_mode: true
+      round_corners: true
+      border_color: None
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: "100%"
+      height: 34
+    padding:
+      top: 4
+      left: 6
+      bottom: 0
+      right: 6
+    widgets:
+      left: ["komorebi_workspaces","active_window"]
+      center: ["clock","apps"]
+      right: ["update","ai","wallpapers","github","taskbar","weather","whkd","volume","power_menu"]
+widgets:
+  update:
+    type: "yasb.update_check.UpdateCheckWidget"
+    options:
+      winget_update:
+        enabled: true
+        label: "<span>\uf0ab</span>{count}"
+        interval: 30
+        exclude: []
+      windows_update:
+        enabled: true
+        label: "<span>\uf0ab</span>{count}"
+        interval: 240
+        exclude: []
+  active_window:
+    type: "yasb.active_window.ActiveWindowWidget"
+    options:
+      label: "{win[title]}"
+      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
+      label_no_window: ""
+      label_icon: true
+      label_icon_size: 14
+      max_length: 56
+      max_length_ellipsis: "..."
+      monitor_exclusive: false
+  clock:
+    type: "yasb.clock.ClockWidget"
+    options:
+      label: "{%a, %d %b %H:%M}"
+      label_alt: "{%A, %d %B %Y %H:%M:%S}"
+      timezones: []
+      calendar: 
+        alignment: "center"
+        offset_top: 6
+  komorebi_workspaces:
+    type: "komorebi.workspaces.WorkspaceWidget"
+    options:
+      label_offline: "\u23fc Offline"
+      label_workspace_btn: "\udb81\udc3d"
+      label_workspace_active_btn: ""
+      label_workspace_populated_btn: "\udb81\udc3e"
+      label_default_name: "{index}"
+      label_zero_index: false
+      hide_empty_workspaces: false
+      hide_if_offline: true
+      animation: true
+  komorebi_active_layout:
+    type: "komorebi.active_layout.ActiveLayoutWidget"
+    options:
+      hide_if_offline: true
+      label: "{icon}"
+      layouts:
+        [
+          "bsp",
+          "columns",
+          "rows",
+          "grid",
+          "vertical_stack",
+          "horizontal_stack",
+          "ultrawide_vertical_stack",
+          "right_main_vertical_stack",
+        ]
+      layout_icons:
+        bsp: "BSP"
+        columns: "COLS"
+        rows: "ROWS"
+        grid: "GRID"
+        vertical_stack: "V-STACK"
+        horizontal_stack: "H-STACK"
+        ultrawide_vertical_stack: "W-STACK"
+        right_main_vertical_stack: "RMV-STACK"
+        monocle: "MONOCLE"
+        maximised: "MAX"
+        floating: "FLOATING"
+        paused: "PAUSED"
+      callbacks:
+        on_left: "next_layout"
+        on_middle: "toggle_monocle"
+        on_right: "prev_layout"
+  weather:
+    type: "yasb.weather.WeatherWidget"
+    options:
+      label: "<span>{icon}</span> {temp}"
+      label_alt: "{location}: Min {min_temp}, Max {max_temp}, Humidity {humidity}"
+      api_key: "{{ .weather_api_key }}"
+      update_interval: 600
+      hide_decimal: true
+      location: "Region Metropolitana, CL"
+      callbacks:
+        on_left: "toggle_label"
+      icons:
+        sunnyDay: "\uf185"
+        clearNight: "\uf186"
+        cloudyDay: "\uf0c2"
+        cloudyNight: "\uf6c3"
+        rainyDay: "\uf740"
+        rainyNight: "\uf740"
+        snowyDay: "\uf2dc"
+        snowyNight: "\uf2dc"
+        blizzardDay: "\uf742"
+        default: "\uf0c2"
+  volume:
+    type: "yasb.volume.VolumeWidget"
+    options:
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      volume_icons:
+        - "\ueee8"
+        - "\uf026"
+        - "\uf027"
+        - "\uf027"
+        - "\uf028"
+      callbacks:
+        on_right: "exec cmd.exe /c start ms-settings:sound"
+  power_menu:
+    type: "yasb.power_menu.PowerMenuWidget"
+    options:
+      label: "\uf011"
+      uptime: True
+      blur: False
+      blur_background: True
+      animation_duration: 200
+      button_row: 5
+      buttons:
+        shutdown: ["\uf011", "Shut Down"]
+        restart: ["\uead2", "Restart"]
+        signout: ["\udb80\udf43", "Sign out"]
+        hibernate: ["\uf28e", "Hibernate"]
+        sleep: ["\u23fe", "Sleep"]
+        cancel: ["", "Cancel"]
+  apps:
+    type: "yasb.applications.ApplicationsWidget"
+    options:
+      label: "{data}"
+      app_list:
+        - { icon: "\uf0a2", launch: "notification_center" }
+        - { icon: "\uf422", launch: "launcher" }
+        - { icon: "\ueb03", launch: "cmd /c Taskmgr" }
+        - { icon: "\uf489", launch: "warp" }
+        - { icon: "\udb84\udec7", launch: "C:\\Program Files\\Mozilla Thunderbird\\thunderbird.exe" }
+        - { icon: "\uf1ff",launch: "{{ .chezmoi.homeDir }}\\AppData\\Local\\Discord\\Update.exe --processStart Discord.exe" }
+        - { icon: "\ue217",launch: "{{ .chezmoi.homeDir }}\\AppData\\Roaming\\Telegram Desktop\\Telegram.exe" }
+        - { icon: "\ued38",launch: "{{ .chezmoi.homeDir }}\\AppData\\Local\\Viber\\Viber.exe" }
+        - { icon: "\uf17e",launch: "C:\\Program Files (x86)\\Microsoft\\Skype for Desktop\\Skype.exe" }
+        - { icon: "\udb80\ude39",launch: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" }
+        - { icon: "\udb82\ude1e",launch: "{{ .chezmoi.homeDir }}\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe" }
+  github:
+    type: "yasb.github.GithubWidget"
+    options:
+      label: "<span>\ueba1</span>"
+      label_alt: "Notifications {data}"
+      token: env
+      max_notification: 30
+      only_unread: false
+      max_field_size: 54
+      update_interval: 60
+  taskbar:
+    type: "yasb.taskbar.TaskbarWidget"
+    options:
+      animation:
+        enabled: true
+      icon_size: 16
+      ignore_apps:
+        processes: []
+        titles: []
+        classes: []
+  ai:
+    type: "yasb.ai_chat.AiChatWidget"
+    options:
+      label: "<span>\udb81\ude74</span>"
+      start_floating: false
+      chat:
+        blur: true
+        round_corners: true
+        border_color: "system"
+        alignment: "right"
+        direction: "down"
+        offset_top: 6
+      icons:
+        attach: "\uf067"
+        send: "\uf1d8"
+        stop: "\uf04d"
+        clear: "\uf1f8"
+        assistant: "\udb81\ude74"
+        close: "\uf00d"
+        copy: "\uebcc"
+        copy_check: "\uf00c"
+      providers:
+        - provider: "Google Gemini"
+          provider_type: "openai"
+          api_endpoint: "https://generativelanguage.googleapis.com/v1beta/openai/"
+          credential: "{{ .gemini_api_key }}"
+          models:
+            - name: "gemini-2.5-flash"
+              label: "Gemini 2.5 Flash"
+              default: true
+            - name: "gemini-2.5-flash-lite"
+              label: "Gemini 2.5 Flash Lite"
+            - name: "gemini-2.0-flash"
+              label: "Gemini 2.0 Flash"
+            - name: "gemini-2.0-pro-exp-02-05"
+              label: "Gemini 2.0 Pro Experimental"
+  whkd:
+    type: "yasb.whkd.WhkdWidget"
+    options:
+      label: "<span>\uf11c</span>"
+  wallpapers:
+    type: "yasb.wallpapers.WallpapersWidget"
+    options:
+      label: "<span>\udb83\ude09</span>"
+      image_path: "{{ .chezmoi.homeDir }}\\Pictures\\Wallpapers"
+      change_automatically: false
+      update_interval: 60
+      gallery:
+        enabled: true
+        blur: true
+        image_width: 296
+        image_per_page: 6
+        show_buttons: false
+        orientation: "portrait"
+        image_spacing: 10
+        lazy_load: true
+        lazy_load_delay: 10
+        lazy_load_fadein: 200
+        image_corner_radius: 20
+        enable_cache: true

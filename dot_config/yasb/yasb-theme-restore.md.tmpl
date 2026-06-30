@@ -1,0 +1,49 @@
+# YASB Theme Restore Guide
+
+## Problema
+Al cambiar de tema, Yasb puede sobrescribir `styles.css` y `config.yaml`. Esto rompe iconos y configuraciones personalizadas.
+
+## Qué hacer
+
+1. Mantén los backups existentes:
+   - `styles.css.backup`
+   - `config.yaml.backup`
+
+2. Usa el watcher de iconos que ya tienes:
+   - `watch-icons.ps1` reinyecta el bloque `icons.css` en `styles.css` si el tema borra tu configuración de iconos.
+
+3. Si `config.yaml` cambia, restaura desde `config.yaml.backup`.
+
+4. Si `styles.css` cambia, comprueba que exista al principio del archivo el bloque:
+   - `/* ICONS-INJECTED START */`
+   - `@font-face { font-family: "Font Awesome 7 Free"; ... }
+   - `.icon, .label span, ... { font-family: "Font Awesome 7 Free", "Phosphor", sans-serif !important; font-weight: 900 !important; }`
+
+5. Si un theme vuelve a romperlo, ejecuta el script `restore-yasb-theme.ps1`.
+
+## Qué debes cambiar manualmente después de cada tema
+
+### `styles.css`
+- Asegúrate de que el `@font-face` del icono esté presente.
+- Asegúrate de que `.icon` y los selectores de spans usan `Font Awesome 7 Free` y `Phosphor`.
+- Si tu theme volvió a poner `font-family: Arial, Helvetica;` en `*`, vuelve a restaurar tu CSS custom con el script.
+
+### `config.yaml`
+- Confirma que tus etiquetas de icono siguen usando spans:
+  - `label: "<span>\uf4bc</span> {info[percent][total]}%"`
+  - `label: "<span>{icon}</span> {temp}"`
+- Mantén tus valores de icono y no los cambies por texto plano si quieres usar fuentes de iconos.
+- Si el theme reescribió widgets, restaura `config.yaml` desde `config.yaml.backup`.
+
+## Uso rápido del script
+
+Ejecuta esto desde `{{ .chezmoi.homeDir }}\.config\yasb`:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\restore-yasb-theme.ps1
+```
+
+## Recomendación final
+- Mantén el watcher `watch-icons.ps1` corriendo mientras uses Yasb.
+- Si cambias de theme, primero deja que el watcher reinyecte `styles.css`; luego revisa `config.yaml`.
+- Si algo aún falla, restaura los backups y reinicia Yasb.

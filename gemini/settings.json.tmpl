@@ -1,0 +1,135 @@
+{
+  "hasSeenIdeIntegrationNudge": true,
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    },
+    "tools": {
+      "autoAccept": true
+    }
+  },
+  "ui": {
+    "theme": "Shades Of Purple",
+    "customThemes": {
+      "NeonTech": {
+        "name": "NeonTech",
+        "type": "custom",
+        "Background": "#181818",
+        "Foreground": "#E0E0E0",
+        "Primary": "#FF007F",
+        "Secondary": "#00F3FF",
+        "Accent": "#FF007F",
+        "Border": "#2A2A2A",
+        "Highlight": "#333333",
+        "InputForeground": "#FFFFFF"
+      }
+    }
+  },
+  "general": {
+    "previewFeatures": true,
+    "sessionRetention": {
+      "warningAcknowledged": true,
+      "enabled": true,
+      "maxAge": "30d"
+    }
+  },
+  "ide": {
+    "enabled": true
+  },
+  "mcpServers": {
+    "context7": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@upstash/context7-mcp"
+      ],
+      "env": {
+        "CONTEXT7_API_KEY": "{{ index . "context7_api_key" }}"
+      },
+      "disabled": false
+    },
+    "notion": {
+      "command": "npx.cmd",
+      "args": [
+        "-y",
+        "@suekou/mcp-notion-server"
+      ],
+      "env": {
+        "NOTION_API_TOKEN": "{{ .notion_api_key }}"
+      },
+      "disabled": true
+    },
+    "multi": {
+      "command": "{{ .chezmoi.homeDir }}\\Documents\\Projects\\multi_mcp\\.venv\\Scripts\\python.exe",
+      "args": [
+        "-m",
+        "multi_mcp.server"
+      ],
+      "env": {
+        "PYTHONPATH": "{{ .chezmoi.homeDir }}\\Documents\\Projects\\multi_mcp"
+      },
+      "disabled": true
+    },
+    "whatsapp": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "{{ .chezmoi.homeDir }}\\Documents\\Projects\\whatsapp-mcp\\whatsapp-mcp-server",
+        "run",
+        "main.py"
+      ],
+      "disabled": true
+    },
+    "firefox-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "firefox-devtools-mcp@latest",
+        "--headless",
+        "--viewport",
+        "375x667"
+      ],
+      "env": {
+        "START_URL": "about:home"
+      },
+      "disabled": true
+    },
+    "open-design": {
+      "command": "{{ .chezmoi.homeDir }}\\AppData\\Local\\Programs\\Open Design\\Open Design.exe",
+      "args": [
+        "{{ .chezmoi.homeDir }}\\AppData\\Local\\Programs\\Open Design\\resources\\app\\prebundled\\daemon\\daemon-cli.mjs",
+        "mcp"
+      ],
+      "env": {
+        "OD_DATA_DIR": "{{ .chezmoi.homeDir }}\\AppData\\Roaming\\Open Design\\namespaces\\release-stable-win\\data",
+        "OD_SIDECAR_IPC_PATH": "\\\\.\\pipe\\open-design-release-stable-win-daemon",
+        "ELECTRON_RUN_AS_NODE": "1"
+      }
+    },
+    "codepen": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "codepen-mcp"
+      ]
+    },
+    "magic": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@21st-dev/magic@latest"
+      ],
+      "env": {
+        "API_KEY": "{{ index . ".21st-dev-magic-api-key" }}"
+      }
+    },
+    "inputs": [
+      {
+        "type": "promptString",
+        "id": "apiKey",
+        "description": "21st.dev Magic API Key",
+        "password": true
+      }
+    ]
+  }
+}

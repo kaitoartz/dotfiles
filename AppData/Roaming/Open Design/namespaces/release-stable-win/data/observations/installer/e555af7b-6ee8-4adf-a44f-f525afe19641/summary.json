@@ -1,0 +1,23 @@
+{
+  "arch": "x64",
+  "artifactType": "installer",
+  "attemptedAt": "2026-06-16T14:10:32.686Z",
+  "channel": "stable",
+  "flowId": "e555af7b-6ee8-4adf-a44f-f525afe19641",
+  "fromVersion": "0.9.0",
+  "kind": "installer_apply_observation",
+  "namespace": "release-stable-win",
+  "platform": "win32",
+  "reason": "app_version_matches",
+  "result": "success",
+  "schemaVersion": 1,
+  "toVersion": "0.10.1",
+  "updatedAt": "2026-06-16T14:15:44.986Z",
+  "delivery": {
+    "eventName": "update_apply_observed",
+    "status": "skipped_missing_identity",
+    "updatedAt": "2026-06-16T14:15:44.986Z"
+  },
+  "elapsedBucket": "5m_1h",
+  "observedAt": "2026-06-16T14:15:44.986Z"
+}

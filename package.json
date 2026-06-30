@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"@composio/core": "^0.10.0",
+		"ai": "^6.0.205",
+		"@ai-sdk/anthropic": "^3.0.84",
+		"@ai-sdk/mcp": "^1.0.51"
+	}
+}

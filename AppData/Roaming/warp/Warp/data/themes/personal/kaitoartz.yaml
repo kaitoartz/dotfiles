@@ -1,0 +1,27 @@
+# background_image:
+#   # background image source: https://cyberpunk.city/t/cdpr-the-new-engine-of-cyberpunk-2077-helps-develop-the-first-person-shooting-it-has-achieved-the-special-effect-of-ray-tracing/74
+#   path: Cyberpunk/2077/Images/Night_City.jpg
+#  opacity: 25
+accent: "#ff79c6" # Rosa neón (el color más icónico de Dracula)
+background: "#1a1b2e" # Un fondo más oscuro y profundo que el Dracula original para que los colores resalten más
+details: darker
+foreground: "#f8f8f2" # Blanco roto muy brillante
+terminal_colors:
+  bright:
+    black: "#6272a4" # Gris azulado de Dracula
+    blue: "#d6acff" # Lila brillante
+    cyan: "#a4ffff" # Cyan neón intenso
+    green: "#69ff94" # Verde neón eléctrico
+    magenta: "#ff92df" # Rosa claro vibrante
+    red: "#ff6e6e" # Rojo vivo
+    white: "#ffffff" # Blanco puro para máximo contraste
+    yellow: "#ffffa5" # Amarillo brillante
+  normal:
+    black: "#21222c" # Negro con tono púrpura
+    blue: "#bd93f9" # Púrpura de Dracula
+    cyan: "#8be9fd" # Cyan clásico Dracula
+    green: "#50fa7b" # Verde fosforescente
+    magenta: "#ff79c6" # Rosa neón
+    red: "#ff5555" # Rojo saturado
+    white: "#f8f8f2" # Blanco roto
+    yellow: "#f1fa8c" # Amarillo mostaza neón
