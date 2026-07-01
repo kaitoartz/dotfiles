@@ -1,0 +1,13 @@
+# Encontrar el perfil activo de Thunderbird
+ $thunderbirdPath = "$env:APPDATA\Thunderbird\Profiles"
+ $profile = Get-ChildItem -Path $thunderbirdPath -Filter "*.default-release" -Directory | Select-Object -First 1
+
+if ($profile) {
+    $source = "{{ .chezmoi.sourceDir }}/AppData/Roaming/Thunderbird/shared/prefs.js"
+    $dest = Join-Path $profile.FullName "prefs.js"
+    
+    Copy-Item -Path $source -Destination $dest -Force
+    Write-Host "Thunderbird config copiada a: $($profile.FullName)"
+} else {
+    Write-Host "No se encontró perfil de Thunderbird"
+}

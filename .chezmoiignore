@@ -10,7 +10,20 @@ dot_config/yasb/fonts/
 # Scripts
 templatizar.ps1
 
-# PowerShell (evitar copias fantasma)
+# Excluir todo lo pesado e innecesario de Thunderbird
+AppData/Roaming/Thunderbird/Profiles/
+.thunderbird/**/Mail/
+.thunderbird/**/ImapMail/
+.thunderbird/**/Cache/
+.thunderbird/**/cert9.db
+.thunderbird/**/key4.db
+.thunderbird/**/key3.db
+.thunderbird/**/global-messages-db.sqlite
+.thunderbird/**/panacea.dat
+.thunderbird/**/locks/
+.thunderbird/**/*.mfl
+.thunderbird/**/*.msf
+.thunderbird/**/*.dat
 
 # Oh-My-Posh (bloquea los cientos de temas por defecto)
 AppData_Local/Programs/oh-my-posh/themes/
@@ -30,4 +43,5 @@ n o d e _ m o d u l e s
  
  * . l o g 
  
+
  
