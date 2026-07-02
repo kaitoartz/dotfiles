@@ -3,7 +3,7 @@
  $profile = Get-ChildItem -Path $thunderbirdPath -Filter "*.default-release" -Directory | Select-Object -First 1
 
 if ($profile) {
-    $source = "{{ .chezmoi.sourceDir }}/AppData/Roaming/Thunderbird/shared/prefs.js"
+    $source = "{{ .chezmoi.sourceDir }}/AppData/Roaming/Thunderbird/shared/prefs.js.tmpl"
     $dest = Join-Path $profile.FullName "prefs.js"
     
     Copy-Item -Path $source -Destination $dest -Force
